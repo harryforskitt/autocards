@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+
+<h1>Top Trumps</h1>
+
+<h2 id="winner">Your Turn!</h2>
+
+<p>You have <span id="playerCards"></span> cards.</p>
+<p>The computer has <span id="computerCards"></span> cards.</p>
+
+<button id="dpsec" type="button" onclick="playCard('0', '0');">Play damage per second</button>
+  <button id="dpshot" type="button" onclick="playCard('1', '0');">Play damage per shot</button>
+  <button id="firerate" type="button" onclick="playCard('2', '0');">Play fire rate</button>
+  <button id="magsize" type="button" onclick="playCard('3', '0');">Play magazine size</button>
+  <button id="rating" type="button" onclick="playCard('4', '0');">Play Top Trumps rating</button>
+  <button id="rating" type="button" onclick="computerPlay();">Computer play</button>
+
+<div class="parent">
+<div class="card1">
+<p>Your card:</p>
+<div class="card">
+<div class="grid-container">
+  <div class="item1" >Name: <span id="pcname"></span></div>
+  <div class="item2">Picture</div>
+  <div class="item3">Damage Per Second: <span id="pcdpsec"></span></div>  
+  <div class="item4">Damage Per Shot: <span id="pcdpshot"></span></div>
+  <div class="item5" >Fire Rate: <span id="pcfirerate"></span></div>
+  <div class="item6" >Magazine Size: <span id="pcmagsize"></span></div>
+  <div class="item7" >Rating: <span id="pcrating"></span></div>
+</div>
+</div>
+</div>
+
+<div class="card2">
+<p>Computer's card:</p>
+<div class="card">
+  <div class="grid-container">
+  <div class="item1" >Name: <span id="ccname"></span></div>
+  <div class="item2">Picture</div>
+  <div class="item3">Damage Per Second: <span id="ccdpsec"></span></div>  
+  <div class="item4">Damage Per Shot: <span id="ccdpshot"></span></div>
+  <div class="item5" >Fire Rate: <span id="ccfirerate"></span></div>
+  <div class="item6" >Magazine Size: <span id="ccmagsize"></span></div>
+  <div class="item7" >Rating: <span id="ccrating"></span></div>
+  </div>
+  </div>
+</div>
+</div>
+
+</body>
+<script src="js.js"></script>
+</html>

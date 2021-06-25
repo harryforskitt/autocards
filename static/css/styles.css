@@ -1,0 +1,49 @@
+.item1 { grid-area: Name; }
+.item2 { grid-area: Picture; }
+.item3 { grid-area: DamagePerSec; }
+.item4 { grid-area: DamagePerShot; }
+.item5 { grid-area: FireRate; }
+.item6 { grid-area: MagSize; }
+.item7 { grid-area: Rating;}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'Name'
+    'Picture'
+    'DamagePerSec'
+    'DamagePerShot'
+    'FireRate'
+    'MagSize'
+    'Rating';
+  grid-gap: 2px;
+  background-color: black;
+  padding: 2px;
+}
+
+.grid-container > div {
+  background-color: grey;
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.card1 p, .card2 p{
+  display: inline;
+}
+
+.card1, .card2{
+  width: 40%;
+}
+
+.parent{
+  justify-content: space-around;
+  width: 100%;
+  display: flex;
+}
