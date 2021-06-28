@@ -6,7 +6,9 @@ function getRandomInt(max) {
 //baseurl= 'http://harryforskitt.com:5000'
 
 //Base url for local development
-baseurl= 'http://127.0.0.1:5000/'
+baseurl= 'http://127.0.0.1:5000/';
+
+console.log('js.js');
 
 function displayPlayerCard(){
 	url=baseurl.concat("/playercard/0");

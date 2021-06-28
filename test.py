@@ -41,6 +41,7 @@ games = []
 cards = []
 
 @app.route("/games", methods = ['GET'])
+@cross_origin()
 def showgames():
     return render_template("games.html")
 
