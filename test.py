@@ -56,7 +56,7 @@ def makegame(name, password):
 def getgames():
     result = ''
     for i in range(0, len(games)):
-        result.append(games[0].name)
+        result+=games[0].name
     return(result)
 
 

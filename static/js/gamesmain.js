@@ -16,16 +16,16 @@ function makeGame(){
 	}).then(function (data) {
 		// This is the JSON from our response
 		console.log(data);
-		return(data);
+		getGames();
+		location.reload();
+		return false;
 	}).catch(function (err) {
 		// There was an error
 		console.warn('Something went wrong.', err);
-	})
+	});
 };
 
 function getGames(){
-    var name = document.getElementById('name').value
-    var password = document.getElementById('password').value
 	url=baseurl.concat("/getgames");
 	fetch(url).then(function (response) {
 		// The API call was successful!
