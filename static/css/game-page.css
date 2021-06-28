@@ -9,8 +9,6 @@ body {
     background-color: #794613;
 }
 
-
-
 .box {
     display: flex;
     justify-content: center;
@@ -35,4 +33,27 @@ body {
     border-radius: 2.5%;
     margin-top: 50px;
     border: 5px solid yellow;
+    justify-content: center;
+    align-items: center;
 }
+
+.grid {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    z-index: 1;
+}
+
+.grid-container { 
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 120px 210px 120px 210px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+
