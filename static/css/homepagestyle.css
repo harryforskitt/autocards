@@ -49,13 +49,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    left: 600px;
-    top: 100px;
 }
 
 .clickhere,
 a {
     text-decoration: none;
     color: white;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 150px 25px 25px 25px;
 }
