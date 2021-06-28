@@ -45,11 +45,12 @@ cards = []
 def showgames():
     return render_template("games.html")
 
-@app.route("/makegame/<name>/<password>", methods = ['POST'])
+@app.route("/makegame/<name>/<password>", methods = ['POST', 'GET'])
 def makegame(name, password):
     newplayer1 = player(len(players)+1, "human", cards)
     newgame = game(name, password, newplayer1)
     games.append(newgame)
+    return('done')
 
 @app.route("/getgames", methods = ['GET'])
 def getgames():
