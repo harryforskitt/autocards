@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+from flask import request
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
@@ -30,7 +31,32 @@ class card:
         self.mag = mag
         self.rating = rating
 
+class game:
+    def __init__(self, name, password, players):
+        self.name = name
+        self.password = password
+        self.players = players
+
+games = []
 cards = []
+
+@app.route("/games", methods = ['GET'])
+def showgames():
+    return render_template("games.html")
+
+@app.route("/makegame/<name>/<password>", methods = ['POST'])
+def makegame(name, password):
+    newplayer1 = player(len(players)+1, "human", cards)
+    newgame = game(name, password, newplayer1)
+    games.append(newgame)
+
+@app.route("/getgames", methods = ['GET'])
+def getgames():
+    result = ''
+    for i in range(0, len(games)):
+        result.append(games[0].name)
+    return(result)
+
 
 #get adjectives
 f=open('adj.txt')

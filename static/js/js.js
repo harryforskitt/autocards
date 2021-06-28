@@ -2,11 +2,14 @@ function getRandomInt(max) {
 	return Math.floor(Math.random() * max);
 }
 
+//Base url for deployed app
+//baseurl= 'http://harryforskitt.com:5000'
 
-
+//Base url for local development
+baseurl= 'http://127.0.0.1:5000/'
 
 function displayPlayerCard(){
-	url="http://harryforskitt.com:5000/playercard/0";
+	url=baseurl.concat("/playercard/0");
 	fetch(url).then(function (response) {
 		// The API call was successful!
 		return response.text();
@@ -28,7 +31,7 @@ function displayPlayerCard(){
 };
 
 function displayComputerCard(){
-	url="http://harryforskitt.com:5000/playercard/1";
+	url=baseurl.concat("/playercard/1");
 	fetch(url).then(function (response) {
 		// The API call was successful!
 		return response.text();
@@ -51,7 +54,7 @@ function displayComputerCard(){
 function playCard(attribute, player){
 	displayComputerCard();
 	console.log("playcard")
-	url="http://harryforskitt.com:5000/play/".concat(attribute).concat("/").concat(player);
+	url=baseurl.concat("/play/").concat(attribute).concat("/").concat(player);
 	console.log(url)
 	fetch(url).then(function (response) {
 		// The API call was successful!
@@ -79,7 +82,7 @@ function computerPlay(){
 	displayComputerCard();
 	var player = '1';
 	var attribute = getRandomInt(5);
-	url="http://harryforskitt.com:5000/play/".concat(attribute).concat("/").concat(player);
+	url=baseurl.concat("/play/").concat(attribute).concat("/").concat(player);
 	console.log(url);
 	fetch(url).then(function (response) {
 		// The API call was successful!
@@ -105,7 +108,7 @@ function computerPlay(){
 function playerCards(){
 	var player = '0';
 	var attribute = getRandomInt(5);
-	url="http://harryforskitt.com:5000//playercards/0";
+	url=baseurl.concat("/playercards/0");
 	console.log(url)
 	fetch(url).then(function (response) {
 		// The API call was successful!
@@ -124,7 +127,7 @@ function playerCards(){
 function computerCards(){
 	var player = '0';
 	var attribute = getRandomInt(5);
-	url="http://harryforskitt.com:5000//playercards/1";
+	url=baseurl.concat("/playercards/1");
 	console.log(url)
 	fetch(url).then(function (response) {
 		// The API call was successful!
