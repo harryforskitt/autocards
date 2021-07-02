@@ -5,6 +5,7 @@
 
 }
 
+/*This is the playing table styling*/ 
 body {
     background-color: #794613;
 }
@@ -37,23 +38,163 @@ body {
     align-items: center;
 }
 
-.grid {
+.player-deck {
+    width: 250px;
+    height: 450px; 
+    border: 1px solid black;
     display: flex;
     justify-content: center;
-    align-content: center;
-    z-index: 1;
+    align-items: center;
+    margin: 0px 50px 0px 50px;
 }
 
-.grid-container { 
-    display: grid;
-    grid-template-columns: auto auto auto;
+.player-card {
+    width: 250px;
+    height: 450px; 
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 50px 0px 50px;
 }
 
-.grid-item {
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 120px 210px 120px 210px;
-    font-size: 30px;
-    text-align: center;
-  }
+.opponent-card{
+    width: 250px;
+    height: 450px; 
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 50px 0px 50px;
+}
 
+.opponent-deck {
+    width: 250px;
+    height: 450px; 
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 50px 0px 50px;
+}
+
+.card-area {
+    width: 250px;
+    height: 450px; 
+    border: 5px solid yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*This is the front card styling*/
+.item1 { grid-area: name; }
+.item2 { grid-area: picture; }
+.item3 { grid-area: DPSecond; }
+.item4 { grid-area: DPShot; }
+.item5 { grid-area: firerate; }
+.item6 { grid-area: magSize; }
+.item7 { grid-area: rating; }
+ 
+.item8 { grid-area: DPSecondValue }
+.item9 { grid-area: DPShotValue }
+.item10 { grid-area: firerateValue }
+.item11 { grid-area: magSizeValue }
+.item12 { grid-area: ratingValue }
+ 
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'name name'
+    'picture picture'
+    'DPSecond DPSecondValue'
+    'DPShot DPShotValue'
+    'firerate firerateValue'
+    'magSize magSizeValue'
+    'rating ratingValue';
+  grid-gap: 3px;
+  background-color: #000000;
+  padding: 3px;
+}
+ 
+.grid-container > div {
+  background-color: rgb(255, 251, 0);
+  text-align: center;
+  padding: 14px 5px 14px 5px;
+  font-size: 30px;
+}
+ 
+.frontCard {
+    
+    display: flex;
+    padding: 4px;
+}
+ 
+p {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  font-size: 10px;
+  padding-left: 5px;
+  font-weight: bold;
+}
+ 
+.name {
+  text-align: center;
+}
+ 
+.values {
+  text-align: center;
+  padding-left: 0;
+}
+ 
+.outline {
+  background-color: white;
+  width: auto;
+  height: auto;
+  border: white;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 10px;
+}
+ 
+.playing-card-graphic {
+  width: 90%;
+  height: auto;
+}
+
+
+/*This is the back of the card styling*/ 
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 424px;
+  width: 230px;
+  border-radius: 10px;
+}
+ 
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 251, 0);
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  height: 404px;
+  width: 210px;
+}
+
+.back-graphic {
+  width: 80%;
+  height: auto;
+} 
+
+.opponent-back-graphic{
+  width: 80%;
+  height: auto;
+  transform: rotate(180deg);
+ 
+}
 
