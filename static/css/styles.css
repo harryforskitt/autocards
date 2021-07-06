@@ -1,3 +1,11 @@
+html, body, iframe{
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  display: block;
+  position: absolute;
+}
+
 .item1 { grid-area: Name; }
 .item2 { grid-area: Picture; }
 .item3 { grid-area: DamagePerSec; }
